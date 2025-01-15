@@ -1,17 +1,21 @@
 import ApplicationLogo from '@/Components/ApplicationLogo';
 import { Link } from '@inertiajs/react';
+import ArrowRight from '@/Components/SvgIcons/ArrowRight';
+import Logo from '@/Components/SvgIcons/Logo';
 
-export default function GuestLayout({ children }) {
+export default function Guest({ children }) {
     return (
-        <div className="flex min-h-screen flex-col items-center bg-gray-100 pt-6 sm:justify-center sm:pt-0">
-            <div>
-                <Link href="/">
-                    <ApplicationLogo className="h-20 w-20 fill-current text-gray-500" />
-                </Link>
-            </div>
+        <div className="relative min-h-screen flex justify-center items-center py-6 sm:py-10 bg-main-and-focus">
+            <button onClick={() => window.history.back()} className='absolute top-5 left-4 md:top-10 md:left-10 btn-primary'>
+                <ArrowRight className="rotate-180" />
+                Back
+            </button>
 
-            <div className="mt-6 w-full overflow-hidden bg-white px-6 py-4 shadow-md sm:max-w-md sm:rounded-lg">
-                {children}
+            <div className='max-w-[457px] min-w-[343px] md:w-[457px] bg-white rounded-2xl md:rounded-3xl border border-card-and-hover px-6 py-4 md:px-10 md:py-[30px]'>
+
+                <div>
+                    {children}
+                </div>
             </div>
         </div>
     );

@@ -13,8 +13,23 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ['"Inter"', '"sans-serif"', ...defaultTheme.fontFamily.sans],
             },
+
+            colors: {
+                'text-primary': '#314252',
+                't-secondary': '#556575',
+                't-disabled': '#B1B5B8',
+                'card-and-hover': '#E1D9C6',
+                'main-and-focus': '#F7F4ED',
+                'side-and-button': '#EFE9DB',
+                'focus-outline': '#E4DECC',
+                'main-outline': '#C7BDA8',
+                'coin': '#FFA600',
+                'warning': '#F95D6A',
+                'success': '#00B47D',
+            },
+
         },
     },
 
